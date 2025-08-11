@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enhanced HTML5 Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2em;
+      background-color: #f9f9f9;
+    }
+    header, main, footer {
+      margin-bottom: 2em;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1em;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.5em;
+      text-align: left;
+    }
+    form {
+      background-color: #fff;
+      padding: 1em;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+    fieldset {
+      margin-bottom: 1em;
+      border: 1px solid #ccc;
+      padding: 1em;
+    }
+    legend {
+      font-weight: bold;
+    }
+    label {
+      display: block;
+      margin-top: 0.5em;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 0.5em;
+      margin-top: 0.2em;
+      box-sizing: border-box;
+    }
+    .readonly {
+      background-color: #eee;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Enhanced HTML5 Form</h1>
+    <p>This page demonstrates a well-structured HTML document with semantic tags, lists, tables, media, and a fully-featured form.</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Features List</h2>
+      <ul>
+        <li>Semantic HTML5 structure</li>
+        <li>Accessible form with validation</li>
+        <li>Use of media elements</li>
+        <li>Tables and lists for structured content</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Sample Data Table</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Subscription</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Aminat Bello</td>
+            <td>aminat@example.com</td>
+            <td>Premium</td>
+          </tr>
+          <tr>
+            <td>John Doe</td>
+            <td>john@example.com</td>
+            <td>Basic</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Embedded Media</h2>
+      <figure>
+        <img src="https://via.placeholder.com/400x200" alt="Sample Image" />
+        <figcaption>Placeholder image for demonstration</figcaption>
+      </figure>
+      <audio controls>
+        <source src="sample-audio.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+    </section>
+
+    <section>
+      <h2>Registration Form</h2>
+      <form action="/submit" method="POST" autocomplete="on">
+        <fieldset>
+          <legend>Personal Information</legend>
+          <label for="fullname">Full Name:</label>
+          <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required />
+
+          <label for="dob">Date of Birth:</label>
+          <input type="date" id="dob" name="dob" required />
+
+          <label for="readonly-id">User ID (readonly):</label>
+          <input type="text" id="readonly-id" name="userid" value="USR12345" readonly class="readonly" />
+        </fieldset>
+
+        <fieldset>
+          <legend>Preferences</legend>
+          <label for="subscription">Subscription Type:</label>
+          <select id="subscription" name="subscription" required>
+            <option value="">--Select--</option>
+            <option value="basic">Basic</option>
+            <option value="premium">Premium</option>
+            <option value="vip">VIP</option>
+          </select>
+
+          <label for="bio">Short Bio:</label>
+          <textarea id="bio" name="bio" rows="4" placeholder="Tell us about yourself..."></textarea>
+
+          <label>
+            <input type="checkbox" name="terms" required />
+            I agree to the terms and conditions
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Login Details</legend>
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required minlength="4" maxlength="12" />
+
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required pattern=".{6,}" placeholder="At least 6 characters" />
+        </fieldset>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Enhanced Form Demo. All rights reserved.</p>
+  </footer>
+</body>
+</html>
